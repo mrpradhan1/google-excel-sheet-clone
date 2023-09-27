@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Excel Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="functions">
+        <h1 id="current-Cell">No Cell selected</h1>
+        <button id="bold-btn">B</button>
+        <button id="italics-btn">l</button>
+        <button id="underline-btn">U</button>
+        <button id="left-btn">Left</button>
+        <button id="center-btn">Center</button>
+        <button id="right-btn">Right</button>
+        
+        <select id="font-style-dropdown">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans Serif</option>
+            <option value="monospace">monospace</option>
+            <option value="cursive">Cursive</option>
+        </select>
+        <select id="font-size-dropdown">
+            <option value="10px" contenteditable="true">10</option>
+            <option value="12px">12</option>
+            <option value="14px">14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+        </select>
+        <label for="bgColor">BG Color</label>
+        <input type="color" id="bgColor">
+        <label for="fontColor">Font Color</label>
+        <input type="color" id="fontColor">
+        <button id="cut-btn">Cut</button>
+        <button id="copy-btn">Copy</button>
+        <button id="paste-btn">Paste</button>
+        <button onclick="downloadMatrix()">Download</button>
+        <input type="file" id="upload-input" accept=".json" />
+    </div>
+    <h1 id="sheet-no">Sheet-no 1</h1>
+    <div></div>
+    <button id="save-sheet-btn">save</button>
+    <button id="add-sheet-btn">Add sheet </button>
+    <div id="button-container">
+        <button id="sheet-1" onclick="viewSheet(event)">Sheet 1</button>
+    </div>
+    
+    <br>
+    <table id="my-table">
+        <thead>
+            <tr id="table-heading-row">
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+    <script src="scritp.js"></script>
+</body>
+</html>
